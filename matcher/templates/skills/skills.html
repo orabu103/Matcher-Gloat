@@ -14,13 +14,16 @@
                 </div>
             </form>
         </div>
-      
+        <div>
+        <h1>List</h1>
         <div class="box-data">
             {% for skill in skills %}
-            <div class="data" style="display: flex;">
-                <p>ID : {{skill.id}} Name : {{skill.name}} </p>
+            <div class="list" style="display: flex;">
+                <p><strong>ID -</strong> {{skill.id}}</p> 
+                <p><strong>Name -</strong> {{skill.name}}</p>
             </div>
             {% endfor %}
+        </div>
         </div>
     </div>
 

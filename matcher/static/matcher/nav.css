@@ -9,7 +9,7 @@ body{
 .navigation {
     /* display: flex;
     justify-content: center; */
-    background: linear-gradient(rgb(77, 0, 128), rgb(84, 18, 170));
+    background: linear-gradient(rgb(100, 100, 100), rgb(137, 137, 138));
     min-width: 100%;
  
 }
@@ -37,6 +37,6 @@ body{
 }
 
 .navigation ul li:hover {
-    background-color: rgba(77, 0, 128, 0.9);
+    background-color: rgba(85, 85, 85, 0.9);
     color: rgb(243, 189, 252);
 }

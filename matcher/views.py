@@ -12,6 +12,7 @@ def Home(request):
 # Goes through all the skills of the job and checks which candidate has more suitable skills
 def CandidateFinder(request):
     candidates = ""
+    job = ""
     try:
         id = request.GET['job']
         job = Job.objects.get(id = id)
@@ -23,7 +24,7 @@ def CandidateFinder(request):
         err = e
     
     jobs = Job.objects.all()
-    return render(request , 'candidateFinder/candidateFinder.html' , {'jobs':jobs , 'candidates' :candidates} )
+    return render(request , 'candidateFinder/candidateFinder.html' , {'jobs':jobs , 'candidates' :candidates , 'job':job} )
     
 
 # This function adds skills to the table Skill

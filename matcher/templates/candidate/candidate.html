@@ -23,13 +23,13 @@
                 </div>
             </form>
         </div>
-        
-        <div class="box-data">
-            <h1>List</h1>
+        <div>
+        <h1>List</h1>
+        <div class="box-data"> 
             {% for candidate in candidates %}
             <div class="data">
-                <p>ID : {{candidate.id}}</p> 
-                <p> Name : {{candidate.title}} </p>
+                <p><strong>ID -</strong> {{candidate.id}}</p> 
+                <p><strong>Name -</strong>  {{candidate.title.name}} </p>
                 <ul> {% for skill in candidate.skill.all %}
                         <li> {{skill.name}}</li>
                     {% endfor %}    
@@ -38,5 +38,6 @@
             {% endfor %}  
         </div>
     </div>
+</div>
 
 {% endblock body %}

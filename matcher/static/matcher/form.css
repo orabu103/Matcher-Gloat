@@ -6,24 +6,25 @@
     border: none;
     padding: 1rem;
     margin: 1rem;
-    border-bottom: 2px solid cornflowerblue;
+    border-bottom: 2px solid rgb(100, 148, 237);
 }
 .form input:focus {
     outline: none;
     /* border-bottom: 2px solid cornflowerblue; */
 }
 .form button {
-    background: linear-gradient(rgb(77, 0, 128), rgb(84, 18, 170));
-    border: 2px solid rgb(77, 0, 128);
+    background: linear-gradient(rgb(100, 148, 237), rgb(110 160 255));
+    border: 2px solid rgb(100, 148, 237);
     width: 30%;
     padding: 1rem;
-    color: rgb(244, 179, 250);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
     border-radius: 5px;
-
 }
 .form button:hover {
     cursor: pointer;
-    background: linear-gradient(rgb(103, 14, 163), rgb(128, 66, 209));
+    background: linear-gradient(rgb(130, 160, 250), rgb(150, 162, 255));
 }
 
 .form button:active, .form button:focus {
@@ -31,13 +32,28 @@
     outline: none;
 }
 .box-data{ 
-    max-height: 100px;
+    max-height: 600px;
+    width: 600px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    background-color: rgb(207, 207, 207);
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 5px;
+}
+.container select{
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 50px;
+    max-height: 50px;
+    cursor: pointer;
 }
 
 .skills{
-    width: 50%;
+    width: 300px;
+    overflow-y: auto;
+    max-height: 500px;
 }
 .container{
     display:flex;
@@ -45,4 +61,36 @@
 
 .container p{
     margin: 0;
+    color: rgb(223, 219, 219);
+    font-size: 18px;
+}
+.container li{
+    color: rgb(245, 245, 245);
+    font-size: 18px;
+}
+
+.data{
+    min-width: 200px;
+    max-width: 200px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    background-color: rgb(119, 119, 119);
+    box-shadow: 5px 5px 5px grey;
+    
+}
+
+.list{
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 50px;
+    max-height: 50;
+    padding: 1rem;
+    margin: 1rem; 
+    border-radius: 5px;
+    background-color: rgb(119, 119, 119);
+    box-shadow: 5px 5px 5px grey;
+    display: flex;
+    flex-direction: column;
+
 }

@@ -1,12 +1,13 @@
 {% extends 'home/home.html' %}
 {% block body %}
 {% load static %}
-    <link rel="stylesheet" href="{% static 'matcher/candidateFinder.css' %}"> 
+    <link rel="stylesheet" href="{% static 'matcher/form.css' %}"> 
 
 
-    <div class="continer">
-        <h1> Find best ones for the Job </h1>
-        <div class="Search">
+    <div class="container">
+        
+        <div class="form">
+            <h1> Find best ones for the Job </h1>
             <form action="{% url 'app:CandidateFinder' %}" method="get">
                 <select name="job">
                     {% for job in jobs %}
@@ -15,19 +16,33 @@
                 </select>
                 <button type="submit">Search</button> 
             </form>
+            <h1>Work details</h1>
+            {% if job %}
+            <div class='data'>
+                <p><strong>ID -</strong> {{job.id}}</p> 
+                <p><strong>Name -</strong>  {{job.title.name}} </p>
+                <ul> {% for skill in job.skill.all %}
+                    <li> {{skill.name}}</li>
+                     {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </div>
-        {% if candidates %}{% endif %}
-            {% for candidat in candidates %}
-                <div>
-                    <p>ID : {{candidat.id}}</p>
-                    <p>Title : {{candidat.title}}</p>
-                    <ul> {% for skill in candidat.skill.all %}
+        <div>
+        <h1>Candidates<h1>
+        <div class='box-data'>
+            {% for candidate in candidates %}
+                <div class='data'>
+                    <p><strong>ID -</strong> {{candidate.id}}</p> 
+                    <p><strong>Name -</strong>  {{candidate.title.name}} </p>
+                    <ul> {% for skill in candidate.skill.all %}
                         <li> {{skill.name}}</li>
                     {% endfor %}    
-                <ul>
-                </div>
+                    <ul>
+                </div >
             {% endfor %}
-
+        </div>
+    </div>
 
     </div>
 

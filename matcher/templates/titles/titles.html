@@ -14,16 +14,18 @@
                 </div>
             </form>
         </div>
-        
+        <div>
+        <h1>List</h1>
         <div class="box-data">
             {% for title in titles %}
-            <div class="data" style="display: flex;">
-                <p>ID : {{title.id}} Name : {{title.name}} </p>
+            <div class="list" style="display: flex;">
+                <p><strong>ID -</strong> {{title.id}}</p> 
+                <p><strong>Name -</strong> {{title.name}}</p>
             </div>
             {% endfor %}
             
         </div>
-      
+    </div>
     </div>
 
 {% endblock body %}

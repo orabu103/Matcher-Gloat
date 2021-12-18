@@ -24,12 +24,13 @@
                 <button type="submit">Add</button> 
             </form>
         </div>
+        <div>
+        <h1>List</h1>
         <div class="box-data">
-            <h1>List</h1>
             {% for job in jobs %}
             <div class="data">
-                <p>ID : {{job.id}}</p> 
-                <p> Name : {{job.title}} </p>
+                <p><strong>ID -</strong> {{job.id}}</p> 
+                <p><strong>Name -</strong>  {{job.title.name}} </p>
                 <ul> {% for skill in job.skill.all %}
                         <li> {{skill.name}}</li>
                     {% endfor %}    
@@ -37,6 +38,7 @@
             </div> 
             {% endfor %}  
         </div>
+    </div>
     </div>
 
 
