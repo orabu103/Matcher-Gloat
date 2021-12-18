@@ -11,7 +11,7 @@
             <form action="{% url 'app:CandidateFinder' %}" method="get">
                 <select name="job">
                     {% for job in jobs %}
-                        <option  value={{job.id}}>{{job}}</option >
+                        <option  value={{job.id}}>ID: {{job.id}} Title :{{job.title.name}}</option >
                     {% endfor %}
                 </select>
                 <button type="submit">Search</button> 
