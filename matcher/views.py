@@ -8,13 +8,35 @@ def Home(request):
       return render(request , 'home/home.html')
 
 def CandidateFinder(request):
+    candidates = 'A'
     try:
         id = request.GET['job']
         job = Job.objects.get(id = id)
+        job_skills = job.skill.all()
+        candidates = Candidate.objects.filter(title = job.title)
+        count = [i.id for i in job_skills]
+        print(count)
+        print(job)
+        print(job_skills)
+        print(candidates)
+        
+        for candidate in candidates:
+            print(candidate.skill.all())
+            counter = 0
+            countin = [i.id for i in candidate.skill.all()]
+            for i in countin:
+                print(i)
+                if(i in count):
+                    counter+=1
+                if(i > count[len(count)-1]):
+                    break
+            (countin)
+            print(counter)
+     
     except Exception as e:
         print(e)
     jobs = Job.objects.all()
-    return render(request , 'candidateFinder/candidateFinder.html' , {'jobs':jobs})
+    return render(request , 'candidateFinder/candidateFinder.html' , {'jobs':jobs , 'candidate' :candidates})
     
  
 def Skills(request):

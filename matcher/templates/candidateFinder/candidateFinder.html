@@ -16,9 +16,18 @@
                 <button type="submit">Search</button> 
             </form>
         </div>
-            {% if job %}
-                <p>ID : {{job.id}}</p> 
-            {% endif %}
+            {% for candidat in candidate %}
+                <div>
+                    <p>ID : {{candidat.id}}</p>
+                    <p>Title : {{candidat.title}}</p>
+                    <ul> {% for skill in candidat.skill.all %}
+                        <li> {{skill.name}}</li>
+                    {% endfor %}    
+                <ul>
+                </div>
+            {% endfor %}
+
+
     </div>
 
 
