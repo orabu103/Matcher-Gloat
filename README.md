@@ -15,8 +15,10 @@ setup.sh
 ```shell
 python manage.py runserver
 ```
-
-
+## Starting server at
+ ``` shell
+ http://127.0.0.1:8000/
+ ```
 
 # DataBase:
 ## SQLite
