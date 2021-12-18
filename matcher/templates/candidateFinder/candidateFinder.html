@@ -7,7 +7,7 @@
     <div class="container">
         
         <div class="form">
-            <h1> Find best ones for the Job </h1>
+            <h2> Find best ones for the Job </h1>
             <form action="{% url 'app:CandidateFinder' %}" method="get">
                 <select name="job">
                     {% for job in jobs %}
@@ -16,8 +16,9 @@
                 </select>
                 <button type="submit">Search</button> 
             </form>
-            <h1>Work details</h1>
+            
             {% if job %}
+            <h1>Work details</h1>
             <div class='data'>
                 <p><strong>ID -</strong> {{job.id}}</p> 
                 <p><strong>Name -</strong>  {{job.title.name}} </p>

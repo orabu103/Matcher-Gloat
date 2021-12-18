@@ -1,6 +1,6 @@
 
 .form{
-    width: 50%;
+    max-width: 300px;
 }
 .form input {
     border: none;
@@ -15,12 +15,13 @@
 .form button {
     background: linear-gradient(rgb(100, 148, 237), rgb(110 160 255));
     border: 2px solid rgb(100, 148, 237);
-    width: 30%;
+    width: 100%;
     padding: 1rem;
     color: rgb(0, 0, 0);
     font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
+    margin: 1rem 0;
 }
 .form button:hover {
     cursor: pointer;
@@ -47,28 +48,42 @@
     max-width: 300px;
     min-height: 50px;
     max-height: 50px;
+    display: inline-block;
     cursor: pointer;
+    overflow-y: auto;
 }
 
 .skills{
     width: 300px;
     overflow-y: auto;
     max-height: 500px;
+    background-color: rgb(207, 207, 207);
 }
+
 .container{
+    width: 80%;
     display:flex;
+    justify-content: space-around;
+  
 }
 
 .container p{
     margin: 0;
     color: rgb(223, 219, 219);
     font-size: 18px;
+    user-select:none;
+ 
 }
 .container li{
     color: rgb(245, 245, 245);
     font-size: 18px;
+    user-select:none;
 }
-
+.container div,
+.container label,
+.container input{
+    user-select:none;
+}
 .data{
     min-width: 200px;
     max-width: 200px;

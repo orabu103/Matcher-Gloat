@@ -35,8 +35,9 @@ def Skills(request):
         skill.save()
     except Exception as e:
         err = e
+
     skills = Skill.objects.all()
-    return render(request , 'skills/skills.html' , {'skills': skills})
+    return render(request , 'skills/skills.html' , {'skills': skills , 'err':err})
 
 # This function adds titles to the table Title
 def Titles(request):
