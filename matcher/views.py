@@ -16,10 +16,10 @@ def CandidateFinder(request):
     try:
         id = request.GET['job']
         job = Job.objects.get(id = id)
-        candidates = Candidate.objects.filter(title = job.title)
-        candidates = candidates.filter(skill__in = job.skill.all()).annotate(sum=Count('id')).order_by('-sum')
-        print(candidates)
-        
+        candidates_title = Candidate.objects.filter(title = job.title)
+        candidates = candidates_title.filter(skill__in = job.skill.all()).annotate(sum=Count('id')).order_by('-sum')
+        if (len(candidates)) is 0:
+            candidates = candidates_title
     except Exception as e:
         err = e
     
