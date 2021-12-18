@@ -1,0 +1,48 @@
+
+.form{
+    width: 50%;
+}
+.form input {
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: 2px solid cornflowerblue;
+}
+.form input:focus {
+    outline: none;
+    /* border-bottom: 2px solid cornflowerblue; */
+}
+.form button {
+    background: linear-gradient(rgb(77, 0, 128), rgb(84, 18, 170));
+    border: 2px solid rgb(77, 0, 128);
+    width: 30%;
+    padding: 1rem;
+    color: rgb(244, 179, 250);
+    border-radius: 5px;
+
+}
+.form button:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(103, 14, 163), rgb(128, 66, 209));
+}
+
+.form button:active, .form button:focus {
+    opacity: 0.85;
+    outline: none;
+}
+.box-data{ 
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills{
+    width: 50%;
+}
+.container{
+    display:flex;
+}
+
+.container p{
+    margin: 0;
+}

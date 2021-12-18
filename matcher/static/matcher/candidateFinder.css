@@ -1,0 +1,34 @@
+.continer{
+
+}
+
+.continer select{
+    height: 100%;
+    cursor: pointer;
+}
+
+.continer button {
+    background: linear-gradient(rgb(77, 0, 128), rgb(84, 18, 170));
+    border: 2px solid rgb(77, 0, 128);
+    width: 30%;
+    padding: 1rem;
+    color: rgb(244, 179, 250);
+    border-radius: 5px;
+
+}
+
+.continer button:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(103, 14, 163), rgb(128, 66, 209));
+}
+
+
+.continer button:active, .continer button:focus {
+    opacity: 0.85;
+    outline: none;
+}
+.Search{
+    box-sizing: border-box;
+    width: 800px;
+    height: 30px;
+}

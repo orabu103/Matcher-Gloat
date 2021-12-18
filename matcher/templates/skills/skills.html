@@ -1,0 +1,27 @@
+{% extends 'home/home.html' %}
+{% block body %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'matcher/form.css' %}">
+
+    <div class="container">
+        <div class="form">
+            <form  action="{% url 'app:Skill' %}" method="post">
+                {% csrf_token %} 
+                <div class="skills_Add">
+                    <h1>Add skill</h1>
+                    <input type="text" name="name" id="name" placeholder="Name"/>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+      
+        <div class="box-data">
+            {% for skill in skills %}
+            <div class="data" style="display: flex;">
+                <p>ID : {{skill.id}} Name : {{skill.name}} </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock body %}

@@ -1,0 +1,44 @@
+{% extends 'home/home.html' %}
+{% block body %}
+
+{% load static %}
+    <link rel="stylesheet" href="{% static 'matcher/form.css' %}"> 
+    <div class="container">
+        <div class="form">
+            <form action="{% url 'app:Job' %}" method="post">
+                {% csrf_token %} 
+                <div>
+                    <h1>Add job</h1>
+                    <select name="title">
+                        {% for title in titles %}
+                            <option value={{title.id}}>{{title.name}}</option>
+                        {% endfor %}
+                    </select>
+                    <div class="skills">
+                        {% for skill in skills %}
+                            <input type="checkbox" id="name" name="name" value={{skill.id}}>
+                            <label for="name"> {{skill.name}}</label><br>
+                        {% endfor %}
+                    </div>
+                </div>
+                <button type="submit">Add</button> 
+            </form>
+        </div>
+        <div class="box-data">
+            <h1>List</h1>
+            {% for job in jobs %}
+            <div class="data">
+                <p>ID : {{job.id}}</p> 
+                <p> Name : {{job.title}} </p>
+                <ul> {% for skill in job.skill.all %}
+                        <li> {{skill.name}}</li>
+                    {% endfor %}    
+                <ul>
+            </div> 
+            {% endfor %}  
+        </div>
+    </div>
+
+
+{% endblock body %}
+

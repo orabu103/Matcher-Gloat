@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'matcher/nav.css' %}">
+    <div class="navigation">
+        <ul>
+            <li><a href="{% url 'app:Skill' %}">Skill</a></li>
+            <li><a href="{% url 'app:Title' %}">Title</a></li>
+            <li><a href="{% url 'app:Candidate' %}">Candidate</a></li>
+            <li><a href="{% url 'app:Job' %}">Job</a></li>
+            <li><a href="{% url 'app:CandidateFinder' %}">CandidateFinder</a></li>
+        </ul>
+    </div>
+  
+    {% block body %}
+
+    {% endblock body %}
+  
