@@ -5,7 +5,7 @@
 ##### cmd: ```.../web_site```
 
 ```shell
-Setup.sh
+setup.sh
 ```
 
 
