@@ -2,7 +2,7 @@
 
 
 ## How To Setup:
-##### cmd: ```.../web_site```
+
 
 ```shell
 setup.sh
@@ -10,7 +10,7 @@ setup.sh
 
 
 ## How To Run: 
-##### cmd: ```.../web_site```
+
 
 ```shell
 python manage.py runserver
