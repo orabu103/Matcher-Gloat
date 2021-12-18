@@ -16,7 +16,8 @@
                 <button type="submit">Search</button> 
             </form>
         </div>
-            {% for candidat in candidate %}
+        {% if candidates %}{% endif %}
+            {% for candidat in candidates %}
                 <div>
                     <p>ID : {{candidat.id}}</p>
                     <p>Title : {{candidat.title}}</p>
